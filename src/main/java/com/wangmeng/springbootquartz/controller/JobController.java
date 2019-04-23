@@ -3,7 +3,6 @@ package com.wangmeng.springbootquartz.controller;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.wangmeng.springbootquartz.job.HelloJob;
 import org.quartz.CronScheduleBuilder;
 import org.quartz.CronTrigger;
 import org.quartz.JobBuilder;
@@ -130,7 +129,6 @@ public class JobController
             throw new Exception("更新定时任务失败");
         }
     }
-
 
     @PostMapping(value="/deletejob")
     public void deletejob(@RequestParam(value="jobClassName")String jobClassName, @RequestParam(value="jobGroupName")String jobGroupName) throws Exception
